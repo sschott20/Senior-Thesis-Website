@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offloaded Stack Unwinding for Embedded Operating Systems</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .links a {
+            display: block;
+            margin-bottom: 10px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Offloaded Stack Unwinding for Embedded Operating Systems</h1>
+        <p><strong>Author:</strong> Sebastian Alexander Schott</p>
+        <p><strong>Advisor:</strong> Professor Lin Zhong</p>
+        <p><strong>Date:</strong> Fall 2024</p>
+        <p>Stack unwinding is an effective way to handle and recover from Panics in Rust, but comes with a storage
+            overhead which can be prohibitive on resource constrained systems. This paper presents an implementation of
+            an offloaded stack unwinder implemented in Hopter, an embedded Rust operating system. By storing unwinding
+            data only on a connected server, we can reduce the storage overhead associated with exception handling while
+            preserving functionality. Performance evaluations show that while the offloaded unwinder incurs additional
+            latency during unwinding, the non-panicking execution pathway remains unaffected. On average, binary size is
+            reduced by 7.55%, demonstrating that offloading metadata is an effective strategy to address the storage
+            limitations of embedded systems. This work highlights the potential for offloading techniques to enable more
+            robust error handling and fault tolerance in embedded operating systems without compromising resource
+            efficiency.</p>
+        <div class="links">
+            <a href="CPSC_490_Senior_Thesis_Schott.pdf" target="_blank">Final Report</a>
+            <a href="path/to/project_poster.pdf" target="_blank">Final Poster</a>
+            <a href="path/to/project_proposal.pdf" target="_blank">Project Proposal</a>
+        </div>
+    </div>
+</body>
+
+</html>
